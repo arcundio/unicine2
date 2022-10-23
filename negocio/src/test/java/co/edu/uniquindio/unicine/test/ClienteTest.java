@@ -100,7 +100,6 @@ public class ClienteTest {
     @Sql("classpath:dataset.sql")
     @Test
     public void listar() {
-
         List<Cliente> lista = clienteRepo.findAll();
         lista.forEach(System.out::println);
     }
