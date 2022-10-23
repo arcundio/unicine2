@@ -47,7 +47,7 @@ public class ProductoConfiteriaTest {
         ProductoConfiteria buscado = productoConfiteriaRepo.findById(1).orElse(null);
         productoConfiteriaRepo.delete(buscado);
 
-        Assertions.assertNull( productoConfiteriaRepo.findById(1) );
+        Assertions.assertNull( productoConfiteriaRepo.findById(1).orElse(null) );
     }
 
 

@@ -45,7 +45,7 @@ public class PeliculaTest {
     @Test
     public void actualizar() {
 
-        Pelicula guardado = peliculaRepo.findById(1213).orElse(null);
+        Pelicula guardado = peliculaRepo.findById(200).orElse(null);
         guardado.setNombre("Clockwork Orange");
 
         Pelicula nuevo = peliculaRepo.save(guardado);

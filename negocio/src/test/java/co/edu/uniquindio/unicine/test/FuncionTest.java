@@ -37,10 +37,10 @@ public class FuncionTest {
     @Test
     public void eliminar() {
 
-        Funcion buscado = funcionRepo.findById(1213).orElse(null);
+        Funcion buscado = funcionRepo.findById(1).orElse(null);
         funcionRepo.delete(buscado);
 
-        Assertions.assertNull( funcionRepo.findById(1213).orElse(null) );
+        Assertions.assertNull( funcionRepo.findById(1).orElse(null));
 
 
     }

@@ -64,7 +64,7 @@ public class ClienteTest {
 
         Cliente guardado = clienteRepo.save(cliente);
 
-        Assertions.assertEquals("Luis", cliente.getNombre());
+        Assertions.assertEquals("Daniel", cliente.getNombre());
     }
     @Sql("classpath:dataset.sql")
     @Test
