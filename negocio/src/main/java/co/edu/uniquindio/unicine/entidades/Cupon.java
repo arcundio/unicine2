@@ -30,7 +30,7 @@ public class Cupon implements Serializable {
 
     private String criterio;
 
-    @OneToOne
+    @OneToOne(mappedBy = "cupon")
     private Factura factura;
 
     @Builder

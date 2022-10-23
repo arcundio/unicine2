@@ -28,13 +28,14 @@ public class Factura implements Serializable {
     private int total;
     @Column(nullable = false, length = 10)
     @Enumerated(EnumType.STRING)
-
     private MedioPago medioPago;
 
-    @OneToOne
+
+    @ManyToOne
     private Cliente cliente;
 
-    @OneToOne(mappedBy = "factura")
+    @ToString.Exclude
+    @OneToOne
     private Cupon cupon;
 
     @ToString.Exclude

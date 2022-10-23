@@ -8,5 +8,9 @@ public enum Departamento {
     BOYACA,
     CUNDINAMARCA,
     NARINO,
+    ANTIOQUIA,
+    VALLE_DEL_CAUCA,
+    RISARALDA
+
     
 }

@@ -2,13 +2,11 @@ package co.edu.uniquindio.unicine.entidades;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Getter
@@ -35,12 +33,13 @@ public class Cliente implements Serializable {
     @Column(nullable = false, length = 10)
     private String numero_telefono;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     @Email
     private String email;
 
-    @OneToOne(mappedBy = "cliente")
-    private Factura factura;
+    @ToString.Exclude
+    @OneToMany(mappedBy = "cliente")
+    private List<Factura> facturas;
 
     @Builder
     public Cliente(int cedula, String nombre, String imagen_perfil, String contrasena, String numero_telefono, String email) {

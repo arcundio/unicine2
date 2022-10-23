@@ -23,9 +23,11 @@ public class Entrada implements Serializable {
     @NotNull
     private int precio;
 
+
     @ManyToOne
     private Funcion funcion;
 
+    @ToString.Exclude
     @OneToOne
     private Silla silla;
 

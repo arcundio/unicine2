@@ -36,10 +36,9 @@ public class Funcion implements Serializable {
     private List<Entrada> entradas;
 
     @Builder
-    public Funcion(LocalDateTime horaInicial, LocalDateTime horaFinal, Pelicula pelicula, List<Entrada> entradas) {
+    public Funcion(LocalDateTime horaInicial, LocalDateTime horaFinal, Pelicula pelicula) {
         this.horaInicial = horaInicial;
         this.horaFinal = horaFinal;
         this.pelicula = pelicula;
-        this.entradas = entradas;
     }
 }

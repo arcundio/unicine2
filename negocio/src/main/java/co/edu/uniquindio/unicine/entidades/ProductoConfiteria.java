@@ -30,6 +30,7 @@ public class ProductoConfiteria implements Serializable {
     @Max(100000)
     private int precio;
 
+    @ToString.Exclude
     @ManyToMany
     private List<Factura> facturas;
 
